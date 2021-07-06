@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.rawgit.com/mholt/PapaParse/2f1eb8c4/papaparse.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+    <title>Chart js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>Department Data</h2>
+    </header>
+    
+    
+    <div class="opt"><select id="box1" >
+        <option>Select Department</option>
+        </select>
+        <button class="drop" type="reload" onclick="disp();">View </button>
+        <button class="sec "  onclick="location.reload();"> Reload</button>
+    </div>
+  <div class="container hidden" id="grid">
+        <div class="wrap-content" >
+        <h3>Pie chart</h3>
+        <canvas id="canvas" class="drop" width="200" height="200" ></canvas>
+    </div>
+        <div class="wrap-content" >
+            <h3>Doughnut</h3>
+             <canvas id="canvas1" class="drop" width="200" height="200" ></canvas>
+         </div>
+        <div class="wrap-content" >
+            <h3>Bar Graph</h3>
+            <canvas id="canvas2" class="drop" width="200" height="200" ></canvas>
+        </div>
+
+
+</div> 
+</body>
+<script src="index.js"></script>
+
+<script>
+    function disp(){
+        var div=document.getElementById("grid");
+        div.classList.remove('hidden');
+	
+    }
+
+</script>
+</html>
