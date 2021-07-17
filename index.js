@@ -2,7 +2,7 @@ const filerows={};
 const dept1=[]
 var h;
 
-Papa.parse('\data.csv', {
+Papa.parse('/data.csv', {
     header:true,
     download:true,
     skipEmptyLines:true,
